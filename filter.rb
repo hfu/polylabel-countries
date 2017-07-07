@@ -12,6 +12,7 @@ target = {:type => 'FeatureCollection', :features => []}
 data['features'].each {|f|
   if(maxes[f['properties']['ISO_A3']] == f['properties']['_area'])
     print 'o'
+    f['properties']['ISO_A3'] = 'FRA' if f['properties']['ADMIN'] == 'France'
     target[:features].push(f)
   else
     print 'x'
