@@ -1,0 +1,22 @@
+{
+  "version": 8,
+  "sources": {
+    "polylabel-countries": {
+      "type": "vector",
+      "tiles": ["https://hfu.github.io/polylabel-countries/{z}/{x}/{y}.mvt"],
+      "maxzoom": 8
+    }
+  },
+  "layers": [
+    {
+      "id": "polylabel-countries",
+      "type": "circle",
+      "source": "polylabel-countries",
+      "source-layer": "polylabel",
+      "paint": {
+        "circle-color": "#5b92e5",
+        "circle-radius": 1
+      }
+    }
+  ]
+}
